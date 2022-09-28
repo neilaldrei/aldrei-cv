@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    border: 1px solid salmon;
+    height: 100vh;
+    display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-template-rows: repeat(12, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.container div.card {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.container .profile-picture {
+    border-radius: 20px;
+    overflow: hidden;
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 9;
+}
+
+.container .profile-picture img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container .details {
+    grid-column: 4 / span 4;
+    grid-row: 1 / span 4;
+}
+
+.container .contacts {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    grid-column: 1 / span 3;
+	grid-row: 10 / span 3;
+}
+
+.container .social-media {
+    grid-column: 8 / span 1;
+    grid-row: 1 / span 4;
+    border: 1px solid;
+}
+
+.container .skills {
+    border: 1px solid;
+    grid-column: 12;
+    grid-row: 1 / span 12;
+}
+
+.container .experience {
+    grid-column: 4 / span 5;
+    grid-row: 5 / span 4;
+}
+
+.container .education {
+    grid-column: 4 / span 5;
+    grid-row: 9 / span 4;
+}
+
+.container .portfolio {
+    border: 1px solid;
+    grid-column: 9 / span 3;
+    grid-row: 1 / span 12;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
