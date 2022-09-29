@@ -19,7 +19,7 @@
     import VSkills from '@/components/Skills.vue';
     import ProfilePicture from '@/components/ProfilePicture.vue';
     import VContacts from '@/components/Contacts.vue';
-    import VExperience from '@/components/Experience.vue';
-    import VEducation from '@/components/Education.vue';
-    import VPortfolio from '@/components/Portfolio.vue';
+    import VExperience from '@/components/ExperienceComponent.vue';
+    import VEducation from '@/components/EducationComponent.vue';
+    import VPortfolio from '@/components/PortfolioComponent.vue';
 </script>

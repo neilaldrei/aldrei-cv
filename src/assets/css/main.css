@@ -87,3 +87,25 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.title {
+    font-size: 18pt;
+}
+
+.subtitle {
+    font-weight: lighter;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.overline {
+    font-weight: lighter;
+    color: grey;
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.center-text {
+    text-align: center;
+}

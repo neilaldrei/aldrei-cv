@@ -5,7 +5,7 @@
                 <h2>{{ details.lastName }}</h2>
                 <h1>{{ details.firstName }}</h1>
             </div>
-            <h6>{{ details.title }}</h6>
+            <h6 class="subtitle">{{ details.title }}</h6>
         </div>
         <p>{{ details.intro }}</p>
     </div>
@@ -47,13 +47,5 @@
         font-size: 11pt;
         font-weight: normal;
         text-align: justify;
-    }
-    
-    .details h6 {
-        margin: auto 0;
-        font-style: italic;
-        font-weight: lighter;
-        font-size: 12pt;
-        color: rgb(20, 19, 19);
     }
 </style>
