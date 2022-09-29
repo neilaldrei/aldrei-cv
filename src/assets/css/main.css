@@ -61,7 +61,6 @@ body {
 }
 
 .container .skills {
-    border: 1px solid;
     grid-column: 12;
     grid-row: 1 / span 12;
 }
