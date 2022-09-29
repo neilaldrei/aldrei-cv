@@ -1,13 +1,18 @@
 <template>
     <div class="experience card">
-        <div v-for="(exp, i) in experiences" :key="i" class="center-text">
-            <h1 class="title">{{ exp.company }}</h1>
-            <h2 class="subtitle">{{ exp.role }}</h2>
-            <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>
-        </div>
+        <div>
+            <div v-for="(exp, i) in experiences" :key="i" class="center-text">
+                <h1 class="title">{{ exp.company }}</h1>
+                <h2 class="subtitle">{{ exp.role }}</h2>
+                <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>
+            </div>
 
-        <div class="actions">
-            <button role="button" class="btn btn-primary">Show all</button>
+            <div class="actions center-text">
+                <button role="button" class="btn btn-text">
+                    Show all
+                    <span class="btn-line"></span>
+                </button>
+            </div>
         </div>
     </div>
 </template>

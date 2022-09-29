@@ -114,3 +114,35 @@ body {
 .center-text {
     text-align: center;
 }
+
+.btn.btn-text {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: rgb(96, 96, 96);
+    font-size: 10pt;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-line {
+    border-bottom: 2px solid;
+    display: block;
+    position: absolute;
+    width: 0;
+    transition: 0.5s;
+}
+
+.btn-text:hover {
+    color: rgb(0, 179, 255);
+}
+
+.btn-text:hover > .btn-line {
+    width: 100%;
+    border-bottom-color: rgb(0, 179, 255);
+}

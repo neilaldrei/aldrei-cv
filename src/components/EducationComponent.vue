@@ -6,8 +6,11 @@
             <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>
         </div>
 
-        <div class="actions">
-            <button role="button" class="btn btn-primary">Show all</button>
+        <div class="actions center-text">
+            <button role="button" class="btn btn-text">
+                Show all
+                <span class="btn-line"></span>
+            </button>
         </div>
     </div>
 </template>
