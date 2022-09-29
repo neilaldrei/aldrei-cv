@@ -21,12 +21,12 @@ const firebaseService = {
         }
     },
 
-    async getDocuments (col, nLimit) {
+    async getDocuments (col, nLimit, orderItem, isOrderedBy) {
         let documents = [];
 
         const q = query(
             collection(db, col), 
-            orderBy("endYear", "desc"), 
+            orderBy(orderItem, isOrderedBy), 
             limit(nLimit)
         );
 

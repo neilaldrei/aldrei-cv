@@ -3,7 +3,7 @@
         <div v-for="(exp, i) in educations" :key="i" class="center-text">
             <h1 class="title">{{ exp.company }}</h1>
             <h2 class="subtitle">{{ exp.role }}</h2>
-            <h4 class="overline">{{ `${date(exp.startYear)} - ${date(exp.endYear)}` }}</h4>
+            <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>
         </div>
 
         <div class="actions">
@@ -20,6 +20,6 @@ import { onMounted, ref } from 'vue';
 let educations = ref([]);
 
 onMounted ( async () => {
-    educations.value = await svc.getDocuments('education', 1);
+    educations.value = await svc.getDocuments('education', 1, 'endYear', 'desc');
 })
 </script>
