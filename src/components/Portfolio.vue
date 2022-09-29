@@ -10,9 +10,6 @@
 <script>
 export default {
     name: "PortfolioComponent",
-    data () {
-        
-    }
 }
 </script>
 

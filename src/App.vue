@@ -14,25 +14,12 @@
     </div>
 </template>
 
-<script>
-import VDetails from '@/components/Details.vue';
-import VSkills from '@/components/Skills.vue';
-import ProfilePicture from '@/components/ProfilePicture.vue';
-import VContacts from '@/components/Contacts.vue';
-import VExperience from '@/components/Experience.vue';
-import VEducation from '@/components/Education.vue';
-import VPortfolio from '@/components/Portfolio.vue';
-
-export default {
-    name: "App",
-    components: {
-        ProfilePicture,
-        VDetails,
-        VSkills,
-        VContacts,
-        VExperience,
-        VEducation,
-        VPortfolio
-    }
-}
+<script setup>
+    import VDetails from '@/components/DetailsComponent.vue';
+    import VSkills from '@/components/Skills.vue';
+    import ProfilePicture from '@/components/ProfilePicture.vue';
+    import VContacts from '@/components/Contacts.vue';
+    import VExperience from '@/components/Experience.vue';
+    import VEducation from '@/components/Education.vue';
+    import VPortfolio from '@/components/Portfolio.vue';
 </script>

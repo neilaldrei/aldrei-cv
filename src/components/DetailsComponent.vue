@@ -2,22 +2,29 @@
     <div class="details" :class="$style.details">
         <div class="row">
             <div>
-                <h2>Peralta</h2>
-                <h1>Neil Aldrei</h1>
+                <h2>{{ details.lastName }}</h2>
+                <h1>{{ details.firstName }}</h1>
             </div>
-            <h6>Web Developer</h6>
+            <h6>{{ details.title }}</h6>
         </div>
-        <p>Hard-working web developer with a flair for creating elegant solutions in the least amount of time. Developed an ecommerce webapp, employee managing webapp, resto web portal, and virtual event website. Passionate about building world class web applications and designing web pages. </p>
+        <p>{{ details.intro }}</p>
     </div>
 </template>
 
-<script>
+<script setup>
+    import svc from '@/common/firebase.service';
+    import { onMounted, ref } from 'vue';
 
+    let details = ref({
+        title: '',
+        lastName: '',
+        firstName: '',
+        intro: ''
+    });
 
-export default {
-    name: "DetailsComponent",
-    
-}
+    onMounted( async () => {
+        details.value = await svc.getDoc('me', 'gGsGpb7Wh8tQ4oZ6OMFz');
+    })
 </script>
 
 <style module>
