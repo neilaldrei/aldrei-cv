@@ -5,6 +5,10 @@
             <h2 class="subtitle">{{ exp.role }}</h2>
             <h4 class="overline">{{ `${date(exp.startYear)} - ${date(exp.endYear)}` }}</h4>
         </div>
+
+        <div class="actions">
+            <button role="button" class="btn btn-primary">Show all</button>
+        </div>
     </div>
 </template>
 

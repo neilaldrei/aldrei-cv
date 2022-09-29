@@ -1,13 +1,25 @@
 <template>
-    <div class="education card"></div>
+    <div class="education card">
+        <div v-for="(exp, i) in educations" :key="i" class="center-text">
+            <h1 class="title">{{ exp.company }}</h1>
+            <h2 class="subtitle">{{ exp.role }}</h2>
+            <h4 class="overline">{{ `${date(exp.startYear)} - ${date(exp.endYear)}` }}</h4>
+        </div>
+
+        <div class="actions">
+            <button role="button" class="btn btn-primary">Show all</button>
+        </div>
+    </div>
 </template>
 
-<script>
-export default {
-    name: "EducationComponent",
-}
+<script setup>
+import svc from '@/common/firebase.service';
+import date from '@/common/dateFilter';
+import { onMounted, ref } from 'vue';
+
+let educations = ref([]);
+
+onMounted ( async () => {
+    educations.value = await svc.getDocuments('education', 1);
+})
 </script>
-
-<style>
-
-</style>
