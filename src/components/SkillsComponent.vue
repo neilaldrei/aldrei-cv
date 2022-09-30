@@ -1,6 +1,6 @@
 <template>
     <div class="skills f-col center-text">
-        <div class="social-media-item" v-for="(skill, i) in skills" :key="i">
+        <div v-for="(skill, i) in skills" :key="i">
             <div :style="`color: ${skill.avatarColor};`">
                 <i :class="`mdi ${skill.icon} mdi-36px icon-hover`"></i>
             </div>

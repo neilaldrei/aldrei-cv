@@ -4,11 +4,11 @@
             <profile-picture></profile-picture>
             <v-details></v-details>
             <v-contacts></v-contacts>
+            <social-media></social-media>
             <v-skills></v-skills>
             <v-experience></v-experience>
             <v-education></v-education>
             <v-portfolio></v-portfolio>
-            <social-media></social-media>
         </div>
     </div>
 </template>
