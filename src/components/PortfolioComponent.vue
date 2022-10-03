@@ -20,6 +20,6 @@
     let projects = ref([]);
 
     onMounted ( async () => {
-        projects.value = await svc.getDocuments('projects', 3, 'deployed', 'desc');
+        projects.value = await svc.getDocuments('projects', 4, 'deployed', 'desc');
     })
 </script>
