@@ -1,26 +1,29 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+import VDetails from '@/components/DetailsComponent.vue';
+import VSkills from '@/components/SkillsComponent.vue';
+import ProfilePicture from '@/components/ProfilePicture.vue';
+import VContacts from '@/components/Contacts.vue';
+import VExperience from '@/components/ExperienceComponent.vue';
+import VEducation from '@/components/EducationComponent.vue';
+import VPortfolio from '@/components/PortfolioComponent.vue';
+import SocialMedia from '@/components/SocialMedia.vue';
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+let profilePictureHandler = (val) => {
+    console.log('profilePicture =>',val.value.ProfilePicture)
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+    <div id="app">
+        <div class="container">
+            <profile-picture @updateProfilePicture="profilePictureHandler"></profile-picture>
+            <v-details></v-details>
+            <v-contacts></v-contacts>
+            <social-media></social-media>
+            <v-skills></v-skills>
+            <v-experience></v-experience>
+            <v-education></v-education>
+            <v-portfolio></v-portfolio>
+        </div>
+    </div>
+</template>
