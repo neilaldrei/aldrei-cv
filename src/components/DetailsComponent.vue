@@ -25,9 +25,7 @@
     });
 
     onMounted( async () => {
-        details.value = await svc.getDoc('me', 'gGsGpb7Wh8tQ4oZ6OMFz');
-        console.log(details);
-        
+        details.value = await svc.getDoc('me', 'gGsGpb7Wh8tQ4oZ6OMFz');        
     })
 
     emit('updateProfilePicture', details)

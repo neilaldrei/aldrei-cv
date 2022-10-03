@@ -6,12 +6,9 @@
             <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>
         </div>
 
-        <div class="actions center-text">
-            <button role="button" class="btn btn-text">
-                Show all
-                <span class="btn-line"></span>
-            </button>
-        </div>
+        <modal-component
+            btn-name="Show More">
+        </modal-component>
     </div>
 </template>
 
@@ -19,6 +16,7 @@
 import svc from '@/common/firebase.service';
 import date from '@/common/dateFilter';
 import { onMounted, ref } from 'vue';
+import ModalComponent from './UI/ModalComponent.vue'
 
 let educations = ref([]);
 

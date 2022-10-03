@@ -5,19 +5,17 @@
                 <img :src="project.image" alt="">
             </div>
         </div>
-        
-        <div class="actions center-text">
-            <button role="button" class="btn btn-text">
-                Show all
-                <span class="btn-line"></span>
-            </button>
-        </div>
+
+        <modal-component
+            btn-name="Show More">
+        </modal-component>
     </div>
 </template>
 
 <script setup>
     import svc from '@/common/firebase.service';
     import { onMounted, ref } from 'vue';
+    import ModalComponent from './UI/ModalComponent.vue';
 
     let projects = ref([]);
 
