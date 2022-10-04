@@ -1,14 +1,13 @@
 <template>
     <div class="dialog-container center-text">
-      <button class="btn">{{ props.btnName }}</button>
+      <button class="btn" @click="isOpen = !isOpen">{{ props.btnName }}</button>
     </div>
 
-    <div class="overlay" v-if="isOpen">
-        <div class="modal">
-            <p class="message">Look at this fancy pop-up</p>
+    <div class="overlay" v-if="isOpen" @click="isOpen = false">
+        <div class="modal" :style="`overflow-y: ${scrollable ? 'auto' : 'none'};`">
+            <slot></slot>
             <div class="options">
-                <button class="btn" @click="isOpen = !isOpen">Yes</button>
-                <button class="btn" @click="isOpen = !isOpen">No</button>
+                <button class="btn" @click="isOpen = false">Nice!</button>
             </div>
         </div>
     </div>
@@ -17,7 +16,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const props = defineProps(['btnName']);
+const props = defineProps(['btnName', 'scrollable']);
 
 const isOpen = ref(false);
 </script>
