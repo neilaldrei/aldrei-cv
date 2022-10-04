@@ -1,18 +1,11 @@
 <template>
     <div class="profile-picture">
-        <img :src="pogi" alt="" />
+        <img :src="props.profilePicture" :title="props.name" :alt="props.name" />
     </div>
 </template>
 
-<script>
-import PogiNeilAldreiLoveLoveSharmaine from '@/assets/images/pogi.png';
+<script setup>
+const props = defineProps(['profilePicture', 'name']);
 
-export default {
-    name: "ProfilePicture",
-    data () {
-        return {
-            pogi: PogiNeilAldreiLoveLoveSharmaine
-        }
-    }
-}
+console.log(props);
 </script>

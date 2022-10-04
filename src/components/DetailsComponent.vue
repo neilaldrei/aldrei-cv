@@ -15,7 +15,7 @@
     import svc from '@/common/firebase.service';
     import { onMounted, ref } from 'vue';
 
-    const emit = defineEmits(['updateProfilePicture'])
+    const emit = defineEmits(['updateProfilePicture']);
 
     let details = ref({
         title: '',
@@ -25,10 +25,9 @@
     });
 
     onMounted( async () => {
-        details.value = await svc.getDoc('me', 'gGsGpb7Wh8tQ4oZ6OMFz');        
+        details.value = await svc.getDoc('me', 'gGsGpb7Wh8tQ4oZ6OMFz');
+        emit('updateProfilePicture', details.value)
     })
-
-    emit('updateProfilePicture', details)
 </script>
 
 <style module>

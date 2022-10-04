@@ -10,7 +10,7 @@
             :scrollable="true"
             btn-name="Show More">
             <div class="modal-body">
-                <div v-for="(exp, i) in experiences" :key="i">
+                <div class="modal-body-item" v-for="(exp, i) in experiences" :key="i">
                     <h1>{{ exp.company }}</h1>
                     <h2 class="subtitle">{{ exp.role }}</h2>
                     <h4 class="overline">{{ `${date(exp.startYear)} — ${date(exp.endYear)}` }}</h4>

@@ -193,6 +193,10 @@ body {
     max-height: 75%;
   }
   
+.modal-body-item {
+    margin: 2rem;
+}
+
   .message {
     font-size:1.1rem;
     margin-bottom: 1.6rem;
